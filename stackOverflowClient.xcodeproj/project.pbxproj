@@ -15,6 +15,11 @@
 		709296881A11650700C92E9C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 709296871A11650700C92E9C /* Images.xcassets */; };
 		7092968B1A11650700C92E9C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 709296891A11650700C92E9C /* LaunchScreen.xib */; };
 		709296971A11650700C92E9C /* stackOverflowClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 709296961A11650700C92E9C /* stackOverflowClientTests.m */; };
+		70B3F7FE1A11792D00A4FCDC /* SplitContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B3F7FD1A11792D00A4FCDC /* SplitContainerViewController.m */; };
+		70B3F8041A1179A500A4FCDC /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B3F8031A1179A500A4FCDC /* RootViewController.m */; };
+		70B3F8071A117A8000A4FCDC /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B3F8061A117A8000A4FCDC /* QuestionViewController.m */; };
+		70B3F80A1A117B7900A4FCDC /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B3F8091A117B7900A4FCDC /* Question.m */; };
+		70B3F80D1A117B8200A4FCDC /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B3F80C1A117B8200A4FCDC /* User.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +47,16 @@
 		709296901A11650700C92E9C /* stackOverflowClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = stackOverflowClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		709296951A11650700C92E9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		709296961A11650700C92E9C /* stackOverflowClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = stackOverflowClientTests.m; sourceTree = "<group>"; };
+		70B3F7FC1A11792D00A4FCDC /* SplitContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplitContainerViewController.h; sourceTree = "<group>"; };
+		70B3F7FD1A11792D00A4FCDC /* SplitContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplitContainerViewController.m; sourceTree = "<group>"; };
+		70B3F8021A1179A500A4FCDC /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		70B3F8031A1179A500A4FCDC /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		70B3F8051A117A8000A4FCDC /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionViewController.h; sourceTree = "<group>"; };
+		70B3F8061A117A8000A4FCDC /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewController.m; sourceTree = "<group>"; };
+		70B3F8081A117B7900A4FCDC /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		70B3F8091A117B7900A4FCDC /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
+		70B3F80B1A117B8200A4FCDC /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		70B3F80C1A117B8200A4FCDC /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,10 +98,10 @@
 		709296761A11650700C92E9C /* stackOverflowClient */ = {
 			isa = PBXGroup;
 			children = (
+				70B3F7FB1A1178FE00A4FCDC /* Model */,
+				70B3F7FA1A1178F100A4FCDC /* Controller */,
 				7092967B1A11650700C92E9C /* AppDelegate.h */,
 				7092967C1A11650700C92E9C /* AppDelegate.m */,
-				709296811A11650700C92E9C /* ViewController.h */,
-				709296821A11650700C92E9C /* ViewController.m */,
 				709296841A11650700C92E9C /* Main.storyboard */,
 				709296871A11650700C92E9C /* Images.xcassets */,
 				709296891A11650700C92E9C /* LaunchScreen.xib */,
@@ -120,6 +135,32 @@
 				709296951A11650700C92E9C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		70B3F7FA1A1178F100A4FCDC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				709296811A11650700C92E9C /* ViewController.h */,
+				709296821A11650700C92E9C /* ViewController.m */,
+				70B3F7FC1A11792D00A4FCDC /* SplitContainerViewController.h */,
+				70B3F7FD1A11792D00A4FCDC /* SplitContainerViewController.m */,
+				70B3F8021A1179A500A4FCDC /* RootViewController.h */,
+				70B3F8031A1179A500A4FCDC /* RootViewController.m */,
+				70B3F8051A117A8000A4FCDC /* QuestionViewController.h */,
+				70B3F8061A117A8000A4FCDC /* QuestionViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		70B3F7FB1A1178FE00A4FCDC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				70B3F8081A117B7900A4FCDC /* Question.h */,
+				70B3F8091A117B7900A4FCDC /* Question.m */,
+				70B3F80B1A117B8200A4FCDC /* User.h */,
+				70B3F80C1A117B8200A4FCDC /* User.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,8 +263,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70B3F7FE1A11792D00A4FCDC /* SplitContainerViewController.m in Sources */,
 				7092967D1A11650700C92E9C /* AppDelegate.m in Sources */,
+				70B3F80D1A117B8200A4FCDC /* User.m in Sources */,
+				70B3F8041A1179A500A4FCDC /* RootViewController.m in Sources */,
+				70B3F8071A117A8000A4FCDC /* QuestionViewController.m in Sources */,
 				7092967A1A11650700C92E9C /* main.m in Sources */,
+				70B3F80A1A117B7900A4FCDC /* Question.m in Sources */,
 				709296831A11650700C92E9C /* ViewController.m in Sources */,
 				709296801A11650700C92E9C /* stackOverflowClient.xcdatamodeld in Sources */,
 			);
@@ -418,6 +464,7 @@
 				7092969C1A11650700C92E9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7092969D1A11650700C92E9C /* Build configuration list for PBXNativeTarget "stackOverflowClientTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +473,7 @@
 				7092969F1A11650700C92E9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
