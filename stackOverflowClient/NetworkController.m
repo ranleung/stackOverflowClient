@@ -30,8 +30,9 @@
     //Will move to init
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     self.urlSession = [NSURLSession sessionWithConfiguration:configuration];
-
-    NSURL *url = [NSURL URLWithString:@"https://api.stackexchange.com/2.2/search?order=desc&sort=activity&tagged=swift&site=stackoverflow"];
+    
+    NSString *urlWithKey = [NSString stringWithFormat:@"https://api.stackexchange.com/2.2/search?order=desc&sort=activity&tagged=%@&site=stackoverflow", key];
+    NSURL *url = [[NSURL alloc] initWithString:urlWithKey];
     
     NSURLSessionDataTask *dataTask = [self.urlSession dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (error != 0) {
@@ -40,8 +41,13 @@
             NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
             NSInteger statusCode = [httpResponse statusCode];
             if (statusCode >= 200 && statusCode <= 299) {
-                NSLog(@"GOT SOME RESPONSE");
-                
+                NSMutableArray *questions = [Question parseJSONDataIntoQuestions:data];
+                NSLog(@"Number of questions found: %lu", (unsigned long)questions.count);
+                [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                    completionHandler(nil, questions);
+                }];
+            } else {
+                NSLog(@"Error! Status code is: %lu", statusCode);
             }
         }
     }];

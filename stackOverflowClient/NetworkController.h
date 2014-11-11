@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Question.h"
 
 @interface NetworkController : NSObject
 

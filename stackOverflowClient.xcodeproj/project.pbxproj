@@ -16,7 +16,6 @@
 		7092968B1A11650700C92E9C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 709296891A11650700C92E9C /* LaunchScreen.xib */; };
 		709296971A11650700C92E9C /* stackOverflowClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 709296961A11650700C92E9C /* stackOverflowClientTests.m */; };
 		70B3F7FE1A11792D00A4FCDC /* SplitContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B3F7FD1A11792D00A4FCDC /* SplitContainerViewController.m */; };
-		70B3F8041A1179A500A4FCDC /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B3F8031A1179A500A4FCDC /* RootViewController.m */; };
 		70B3F8071A117A8000A4FCDC /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B3F8061A117A8000A4FCDC /* QuestionViewController.m */; };
 		70B3F80A1A117B7900A4FCDC /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B3F8091A117B7900A4FCDC /* Question.m */; };
 		70B3F80D1A117B8200A4FCDC /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B3F80C1A117B8200A4FCDC /* User.m */; };
@@ -50,8 +49,6 @@
 		709296961A11650700C92E9C /* stackOverflowClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = stackOverflowClientTests.m; sourceTree = "<group>"; };
 		70B3F7FC1A11792D00A4FCDC /* SplitContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplitContainerViewController.h; sourceTree = "<group>"; };
 		70B3F7FD1A11792D00A4FCDC /* SplitContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplitContainerViewController.m; sourceTree = "<group>"; };
-		70B3F8021A1179A500A4FCDC /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		70B3F8031A1179A500A4FCDC /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		70B3F8051A117A8000A4FCDC /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionViewController.h; sourceTree = "<group>"; };
 		70B3F8061A117A8000A4FCDC /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewController.m; sourceTree = "<group>"; };
 		70B3F8081A117B7900A4FCDC /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
@@ -147,8 +144,6 @@
 				709296821A11650700C92E9C /* ViewController.m */,
 				70B3F7FC1A11792D00A4FCDC /* SplitContainerViewController.h */,
 				70B3F7FD1A11792D00A4FCDC /* SplitContainerViewController.m */,
-				70B3F8021A1179A500A4FCDC /* RootViewController.h */,
-				70B3F8031A1179A500A4FCDC /* RootViewController.m */,
 				70B3F8051A117A8000A4FCDC /* QuestionViewController.h */,
 				70B3F8061A117A8000A4FCDC /* QuestionViewController.m */,
 				70B3F80E1A117BFE00A4FCDC /* NetworkController.h */,
@@ -271,7 +266,6 @@
 				70B3F7FE1A11792D00A4FCDC /* SplitContainerViewController.m in Sources */,
 				7092967D1A11650700C92E9C /* AppDelegate.m in Sources */,
 				70B3F80D1A117B8200A4FCDC /* User.m in Sources */,
-				70B3F8041A1179A500A4FCDC /* RootViewController.m in Sources */,
 				70B3F8101A117BFE00A4FCDC /* NetworkController.m in Sources */,
 				70B3F8071A117A8000A4FCDC /* QuestionViewController.m in Sources */,
 				7092967A1A11650700C92E9C /* main.m in Sources */,

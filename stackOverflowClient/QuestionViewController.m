@@ -7,11 +7,8 @@
 //
 
 #import "QuestionViewController.h"
-#import "NetworkController.h"
 
 @interface QuestionViewController ()
-
-
 @end
 
 @implementation QuestionViewController
@@ -19,17 +16,34 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NetworkController *sharedManager = [NetworkController sharedManager];
-    [sharedManager fetchQuestionsWithSearchTerm:@"swift" completionHandler:nil];
+    self.sharedManager = [NetworkController sharedManager];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.searchBar.delegate = self;
+}
 
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    NSLog(@"%@",searchBar);
+    [self.sharedManager fetchQuestionsWithSearchTerm:self.searchBar.text completionHandler:^(NSError *error, NSMutableArray *response) {
+        if (error != nil) {
+            NSLog(@"%@", error.localizedDescription);
+        } else {
+            self.questions = response;
+            [self.tableView reloadData];
+        }
+    }];
+    [self.searchBar resignFirstResponder];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return self.questions.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return nil;
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"QUESTIONS_CELL"];
+    Question *question = self.questions[indexPath.row];
+    cell.textLabel.text = question.title;
+    return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
