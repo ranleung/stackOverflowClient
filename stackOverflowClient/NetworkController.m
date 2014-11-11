@@ -44,23 +44,25 @@
         if (error != nil) {
             NSLog(@"%@", [error localizedDescription]);
         } else {
-            NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
-            NSInteger statusCode = [httpResponse statusCode];
-            if (statusCode >= 200 && statusCode <= 299) {
-                NSMutableArray *questions = [Question parseJSONDataIntoQuestions:data];
-                NSLog(@"Number of questions found: %lu", (unsigned long)questions.count);
-                [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                    completionHandler(nil, questions);
-                }];
-            } else if (statusCode >= 400 && statusCode <= 499) {
-                NSLog(@"Error! Status code is: %lu", statusCode);
-                NSLog(@"This is the clients fault");
-            } else if (statusCode >= 500 && statusCode <= 599) {
-                NSLog(@"Error! Status code is: %lu", statusCode);
-                NSLog(@"This is the server's fault");
-            } else {
-                NSLog(@"Error! Status code is: %lu", statusCode);
-                NSLog(@"Bad Response");
+            if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
+                NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
+                NSInteger statusCode = [httpResponse statusCode];
+                if (statusCode >= 200 && statusCode <= 299) {
+                    NSMutableArray *questions = [Question parseJSONDataIntoQuestions:data];
+                    NSLog(@"Number of questions found: %lu", (unsigned long)questions.count);
+                    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                        completionHandler(nil, questions);
+                    }];
+                } else if (statusCode >= 400 && statusCode <= 499) {
+                    NSLog(@"Error! Status code is: %lu", statusCode);
+                    NSLog(@"This is the clients fault");
+                } else if (statusCode >= 500 && statusCode <= 599) {
+                    NSLog(@"Error! Status code is: %lu", statusCode);
+                    NSLog(@"This is the server's fault");
+                } else {
+                    NSLog(@"Error! Status code is: %lu", statusCode);
+                    NSLog(@"Bad Response");
+                }
             }
         }
     }];

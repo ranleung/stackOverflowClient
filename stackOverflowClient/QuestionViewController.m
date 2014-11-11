@@ -18,7 +18,10 @@
     
     self.title = @"Questions";
     
-    self.tableView.estimatedRowHeight = 148.0;
+    //Register Nib
+    [[self tableView] registerNib:[UINib nibWithNibName:@"QuestionCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"QUESTION_CELL"];
+    
+    self.tableView.estimatedRowHeight = 200.0;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     
     self.sharedManager = [NetworkController sharedManager];
@@ -45,9 +48,8 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    QuestionCell *cell = [tableView dequeueReusableCellWithIdentifier:@"QUESTIONS_CELL"];
+    QuestionCell *cell = [tableView dequeueReusableCellWithIdentifier:@"QUESTION_CELL"];
     Question *question = self.questions[indexPath.row];
-    //cell.textLabel.text = question.title;
     cell.questionLabel.text = question.title;
     cell.userName.text = question.userName;
     return cell;
