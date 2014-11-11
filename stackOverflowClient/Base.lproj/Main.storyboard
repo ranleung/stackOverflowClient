@@ -36,7 +36,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="SFh-vo-glY">
-                                <rect key="frame" x="0.0" y="25" width="600" height="575"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <searchBar key="tableHeaderView" contentMode="redraw" id="75w-Mv-i4q">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -44,7 +44,7 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </searchBar>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="pgz-5f-XoP">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="QUESTION_CELL" id="pgz-5f-XoP">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pgz-5f-XoP" id="LWK-90-Vyf">
@@ -56,7 +56,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="SFh-vo-glY" firstAttribute="top" secondItem="Evh-kq-C6I" secondAttribute="bottom" constant="25" id="58C-qp-iHC"/>
+                            <constraint firstItem="SFh-vo-glY" firstAttribute="top" secondItem="Evh-kq-C6I" secondAttribute="bottom" id="58C-qp-iHC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SFh-vo-glY" secondAttribute="trailing" constant="-16" id="HZX-mN-T5Y"/>
                             <constraint firstItem="SFh-vo-glY" firstAttribute="leading" secondItem="gFB-lD-yC6" secondAttribute="leadingMargin" constant="-16" id="cVA-TD-oVM"/>
                             <constraint firstItem="vX8-jc-wZ2" firstAttribute="top" secondItem="SFh-vo-glY" secondAttribute="bottom" id="sxM-wv-MDV"/>

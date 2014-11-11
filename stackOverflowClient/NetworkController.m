@@ -10,7 +10,8 @@
 
 @implementation NetworkController
 
-//Singleton
+#pragma mark - Singleton
+
 @synthesize network;
 
 + (id)sharedManager {
@@ -22,25 +23,30 @@
     return sharedMyManager;
 }
 
-- (id)init {
-    return self;
-}
+#pragma mark - Network Call
 
-//To Call
-//NetworkController *sharedManager = [NetworkController sharedManager];
-
-
-
-- (void)fetchQuestionsWithSearchTerm:(NSString*)key completionHandler:(void(^)(NSError *error, NSArray *repsonse)) completionHandler {
+- (void)fetchQuestionsWithSearchTerm:(NSString *)key completionHandler: (void(^)(NSError *error, NSMutableArray *response))completionHandler {
     
-    NSString *urlPlaceholder = [NSString stringWithFormat:@"https://api.stackexchange.com/2.2/search?order=desc&sort=activity&tagged=%@&site=stackoverflow", key];
-    NSURL *url = [NSURL URLWithString:urlPlaceholder];
+    //Will move to init
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    self.urlSession = [NSURLSession sessionWithConfiguration:configuration];
+
+    NSURL *url = [NSURL URLWithString:@"https://api.stackexchange.com/2.2/search?order=desc&sort=activity&tagged=swift&site=stackoverflow"];
     
-    NSURLSessionDataTask *dataTask = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        NSHTTPURLResponse *httpResponse = response;
-        
-        
+    NSURLSessionDataTask *dataTask = [self.urlSession dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        if (error != 0) {
+            NSLog(@"%@", [error localizedDescription]);
+        } else {
+            NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
+            NSInteger statusCode = [httpResponse statusCode];
+            if (statusCode >= 200 && statusCode <= 299) {
+                NSLog(@"GOT SOME RESPONSE");
+                
+            }
+        }
     }];
+    [dataTask resume];
+    
     
 
 }
