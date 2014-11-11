@@ -10,4 +10,13 @@
 
 @interface NetworkController : NSObject
 
+//NSString * network;
+
+
+@property (nonatomic, strong) NSOperationQueue *imageQueue;
+@property (nonatomic, retain) NSString *network;
+- (void)fetchQuestionsWithSearchTerm:(NSString*)key completionHandler:(void(^)(NSError *error, NSArray *repsonse)) completionHandler;
+
++ (id)sharedManager;
+
 @end

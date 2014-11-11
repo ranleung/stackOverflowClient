@@ -10,4 +10,13 @@
 
 @implementation Question
 
+//+ (NSArray)parseJSONDataIntoQuestions:(NSData *)rawJSONData {
+//    NSDictionary *searchJSONDictionary = [NSJSONSerialization JSONObjectWithData:rawJSONData options:nil error:nil];
+//    NSArray *questions = [NSArray array];
+//    
+//    
+//    
+//    return nil;
+//};
+
 @end
