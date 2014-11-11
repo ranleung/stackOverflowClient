@@ -11,7 +11,7 @@
 @implementation Question
 
 - (id)init: (NSDictionary *)JSONDictionary {
-    if ((self = [super init])) {
+    if (self = [super init]) {
         self.title = JSONDictionary[@"title"];
         self.tags = JSONDictionary[@"tags"];
         NSDictionary *owner = JSONDictionary[@"owner"];

@@ -35,7 +35,7 @@
     NSURL *url = [[NSURL alloc] initWithString:urlWithKey];
     
     NSURLSessionDataTask *dataTask = [self.urlSession dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        if (error != 0) {
+        if (error != nil) {
             NSLog(@"%@", [error localizedDescription]);
         } else {
             NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
@@ -46,8 +46,15 @@
                 [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                     completionHandler(nil, questions);
                 }];
+            } else if (statusCode >= 400 && statusCode <= 499) {
+                NSLog(@"Error! Status code is: %lu", statusCode);
+                NSLog(@"This is the clients fault");
+            } else if (statusCode >= 500 && statusCode <= 599) {
+                NSLog(@"Error! Status code is: %lu", statusCode);
+                NSLog(@"This is the server's fault");
             } else {
                 NSLog(@"Error! Status code is: %lu", statusCode);
+                NSLog(@"Bad Response");
             }
         }
     }];
