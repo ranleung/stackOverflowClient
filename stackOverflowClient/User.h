@@ -12,4 +12,6 @@
 
 @property (nonatomic, strong) NSString *userName;
 
+- (instancetype) init: (NSDictionary *)userDict;
+
 @end

@@ -16,6 +16,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"Questions";
+    
+    self.tableView.estimatedRowHeight = 148.0;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
     self.sharedManager = [NetworkController sharedManager];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -40,9 +45,11 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"QUESTIONS_CELL"];
+    QuestionCell *cell = [tableView dequeueReusableCellWithIdentifier:@"QUESTIONS_CELL"];
     Question *question = self.questions[indexPath.row];
-    cell.textLabel.text = question.title;
+    //cell.textLabel.text = question.title;
+    cell.questionLabel.text = question.title;
+    cell.userName.text = question.userName;
     return cell;
 }
 

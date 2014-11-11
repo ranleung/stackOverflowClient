@@ -20,6 +20,8 @@
 		70B3F80A1A117B7900A4FCDC /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B3F8091A117B7900A4FCDC /* Question.m */; };
 		70B3F80D1A117B8200A4FCDC /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B3F80C1A117B8200A4FCDC /* User.m */; };
 		70B3F8101A117BFE00A4FCDC /* NetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B3F80F1A117BFE00A4FCDC /* NetworkController.m */; };
+		70F32F231A1280BD006CDA34 /* QuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F32F211A1280BD006CDA34 /* QuestionCell.m */; };
+		70F32F241A1280BD006CDA34 /* QuestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70F32F221A1280BD006CDA34 /* QuestionCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,9 @@
 		70B3F80C1A117B8200A4FCDC /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		70B3F80E1A117BFE00A4FCDC /* NetworkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkController.h; sourceTree = "<group>"; };
 		70B3F80F1A117BFE00A4FCDC /* NetworkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkController.m; sourceTree = "<group>"; };
+		70F32F201A1280BD006CDA34 /* QuestionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionCell.h; sourceTree = "<group>"; };
+		70F32F211A1280BD006CDA34 /* QuestionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionCell.m; sourceTree = "<group>"; };
+		70F32F221A1280BD006CDA34 /* QuestionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,13 +103,12 @@
 		709296761A11650700C92E9C /* stackOverflowClient */ = {
 			isa = PBXGroup;
 			children = (
-				70B3F7FB1A1178FE00A4FCDC /* Model */,
 				70B3F7FA1A1178F100A4FCDC /* Controller */,
+				70B3F7FB1A1178FE00A4FCDC /* Model */,
+				70F32F1D1A128024006CDA34 /* View */,
 				7092967B1A11650700C92E9C /* AppDelegate.h */,
 				7092967C1A11650700C92E9C /* AppDelegate.m */,
-				709296841A11650700C92E9C /* Main.storyboard */,
 				709296871A11650700C92E9C /* Images.xcassets */,
-				709296891A11650700C92E9C /* LaunchScreen.xib */,
 				7092967E1A11650700C92E9C /* stackOverflowClient.xcdatamodeld */,
 				709296771A11650700C92E9C /* Supporting Files */,
 			);
@@ -161,6 +165,18 @@
 				70B3F80C1A117B8200A4FCDC /* User.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		70F32F1D1A128024006CDA34 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				709296841A11650700C92E9C /* Main.storyboard */,
+				70F32F201A1280BD006CDA34 /* QuestionCell.h */,
+				70F32F211A1280BD006CDA34 /* QuestionCell.m */,
+				70F32F221A1280BD006CDA34 /* QuestionCell.xib */,
+				709296891A11650700C92E9C /* LaunchScreen.xib */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				709296861A11650700C92E9C /* Main.storyboard in Resources */,
+				70F32F241A1280BD006CDA34 /* QuestionCell.xib in Resources */,
 				7092968B1A11650700C92E9C /* LaunchScreen.xib in Resources */,
 				709296881A11650700C92E9C /* Images.xcassets in Resources */,
 			);
@@ -268,6 +285,7 @@
 				70B3F80D1A117B8200A4FCDC /* User.m in Sources */,
 				70B3F8101A117BFE00A4FCDC /* NetworkController.m in Sources */,
 				70B3F8071A117A8000A4FCDC /* QuestionViewController.m in Sources */,
+				70F32F231A1280BD006CDA34 /* QuestionCell.m in Sources */,
 				7092967A1A11650700C92E9C /* main.m in Sources */,
 				70B3F80A1A117B7900A4FCDC /* Question.m in Sources */,
 				709296831A11650700C92E9C /* ViewController.m in Sources */,

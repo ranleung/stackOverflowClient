@@ -8,11 +8,17 @@
 
 #import "NetworkController.h"
 
+@interface NetworkController()
+
+@property (nonatomic, strong) NSURLSession *urlSession;
+
+@end
+
 @implementation NetworkController
 
 #pragma mark - Singleton
 
-@synthesize network;
+//@synthesize network;
 
 + (id)sharedManager {
     static NetworkController *sharedMyManager = nil;
