@@ -10,13 +10,51 @@
 
 @implementation Question
 
-//+ (NSArray)parseJSONDataIntoQuestions:(NSData *)rawJSONData {
-//    NSDictionary *searchJSONDictionary = [NSJSONSerialization JSONObjectWithData:rawJSONData options:nil error:nil];
-//    NSArray *questions = [NSArray array];
-//    
-//    
-//    
-//    return nil;
-//};
+- (id)init: (NSDictionary *)JSONDictionary {
+    if ((self = [super init])) {
+        self.title = JSONDictionary[@"title"];
+        self.tags = JSONDictionary[@"tags"];
+        NSDictionary *owner = JSONDictionary[@"owner"];
+        self.ownerID = owner[@"user_id"];
+        self.userName = owner[@"display_name"];
+    }
+    return self;
+}
+
++ (NSMutableArray *)parseJSONDataIntoQuestions: (NSData *)rawJSONData {
+    NSMutableArray *questions = [[NSMutableArray alloc] init];
+    NSError *error = nil;
+    NSDictionary *searchJSONDictionary = [NSJSONSerialization JSONObjectWithData:rawJSONData options:0 error: &error];
+    for(NSDictionary *question in searchJSONDictionary[@"items"]) {
+        Question *questionObject = [[Question alloc] init: question];
+        [questions addObject:questionObject];
+    }
+    return questions;
+    
+};
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

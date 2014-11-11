@@ -13,6 +13,7 @@
 @property (nonatomic, strong) NSURLSession *urlSession;
 @property (nonatomic, strong) NSOperationQueue *imageQueue;
 @property (nonatomic, retain) NSString *network;
+
 - (void)fetchQuestionsWithSearchTerm:(NSString*)key completionHandler:(void(^)(NSError *error, NSMutableArray *repsonse)) completionHandler;
 
 + (id)sharedManager;
