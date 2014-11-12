@@ -13,6 +13,7 @@
 
 @property (nonatomic, strong) NSOperationQueue *operationQueue;
 @property (nonatomic, retain) NSString *network;
+@property (nonatomic, strong) NSString *token;
 
 - (void)fetchQuestionsWithSearchTerm:(NSString*)key completionHandler:(void(^)(NSError *error, NSMutableArray *repsonse)) completionHandler;
 

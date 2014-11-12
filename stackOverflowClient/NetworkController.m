@@ -16,9 +16,20 @@
 
 @implementation NetworkController
 
-#pragma mark - Singleton
+- (instancetype)init {
+    if (self.urlSession == nil) {
+        NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+        self.urlSession = [NSURLSession sessionWithConfiguration:configuration];
+        NSString *authToken = [[NSUserDefaults standardUserDefaults] valueForKey:@"authToken"];
+        if (authToken) {
+            self.token = authToken;
+            NSLog(@"Token Retrieved");
+        }
+    }
+    return self;
+}
 
-//@synthesize network;
+#pragma mark - Singleton
 
 + (id)sharedManager {
     static NetworkController *sharedMyManager = nil;
@@ -32,10 +43,6 @@
 #pragma mark - Network Call
 
 - (void)fetchQuestionsWithSearchTerm:(NSString *)key completionHandler: (void(^)(NSError *error, NSMutableArray *response))completionHandler {
-    
-    //Will move to init
-    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
-    self.urlSession = [NSURLSession sessionWithConfiguration:configuration];
     
     NSString *urlWithKey = [NSString stringWithFormat:@"https://api.stackexchange.com/2.2/search?order=desc&sort=activity&tagged=%@&site=stackoverflow", key];
     NSURL *url = [[NSURL alloc] initWithString:urlWithKey];

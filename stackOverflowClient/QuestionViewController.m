@@ -21,7 +21,6 @@
     //Register Nib
     [[self tableView] registerNib:[UINib nibWithNibName:@"QuestionCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"QUESTION_CELL"];
     
-    self.tableView.estimatedRowHeight = 200.0;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     
     self.sharedManager = [NetworkController sharedManager];
