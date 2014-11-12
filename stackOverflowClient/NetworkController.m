@@ -7,10 +7,12 @@
 //
 
 #import "NetworkController.h"
+#import "Question.h"
+#import "Constants.h"
 
 @interface NetworkController()
 
-@property (nonatomic, strong) NSURLSession *urlSession;
+@property (nonatomic, strong) NSString *token;
 
 @end
 
@@ -31,7 +33,7 @@
 
 #pragma mark - Singleton
 
-+ (id)sharedManager {
++ (instancetype)sharedManager {
     static NetworkController *sharedMyManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -40,11 +42,21 @@
     return sharedMyManager;
 }
 
-#pragma mark - Network Call
+#pragma mark - Private Methods
+
++ (void)setToken:(NSString *)token {
+    [[self sharedManager] setToken:token];
+}
 
 - (void)fetchQuestionsWithSearchTerm:(NSString *)key completionHandler: (void(^)(NSError *error, NSMutableArray *response))completionHandler {
     
-    NSString *urlWithKey = [NSString stringWithFormat:@"https://api.stackexchange.com/2.2/search?order=desc&sort=activity&tagged=%@&site=stackoverflow", key];
+    //https://api.stackexchange.com/2.2/search/advanced?order=desc&sort=activity&site=stackoverflow&q=objective-c&access_token=c6YOPm8JW7JsfbLrwNzzWw))&key=foou1)sdBxY)4C9g5GCNrw((
+    
+//    NSString *urlWithKey = [NSString stringWithFormat:@"https://api.stackexchange.com/2.2/search?order=desc&sort=activity&tagged=%@&site=stackoverflow", key];
+    
+    NSString *urlWithKey = [NSString stringWithFormat:@"https://api.stackexchange.com/2.2/search/advanced?order=desc&sort=activity&site=stackoverflow&q=%@&access_token=%@&key=%@",key,self.token,kClientKey];
+    
+    
     NSURL *url = [[NSURL alloc] initWithString:urlWithKey];
     
     NSURLSessionDataTask *dataTask = [self.urlSession dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {

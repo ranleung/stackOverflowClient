@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70090BD31A13E1F5008B2E86 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 70090BD21A13E1F5008B2E86 /* Constants.m */; };
 		7092967A1A11650700C92E9C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 709296791A11650700C92E9C /* main.m */; };
 		7092967D1A11650700C92E9C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7092967C1A11650700C92E9C /* AppDelegate.m */; };
 		709296801A11650700C92E9C /* stackOverflowClient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7092967E1A11650700C92E9C /* stackOverflowClient.xcdatamodeld */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		70090BD11A13E1F5008B2E86 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		70090BD21A13E1F5008B2E86 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		709296741A11650700C92E9C /* stackOverflowClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stackOverflowClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		709296781A11650700C92E9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		709296791A11650700C92E9C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -109,11 +112,13 @@
 		709296761A11650700C92E9C /* stackOverflowClient */ = {
 			isa = PBXGroup;
 			children = (
+				7092967B1A11650700C92E9C /* AppDelegate.h */,
+				7092967C1A11650700C92E9C /* AppDelegate.m */,
+				70090BD11A13E1F5008B2E86 /* Constants.h */,
+				70090BD21A13E1F5008B2E86 /* Constants.m */,
 				70B3F7FA1A1178F100A4FCDC /* Controller */,
 				70B3F7FB1A1178FE00A4FCDC /* Model */,
 				70F32F1D1A128024006CDA34 /* View */,
-				7092967B1A11650700C92E9C /* AppDelegate.h */,
-				7092967C1A11650700C92E9C /* AppDelegate.m */,
 				709296871A11650700C92E9C /* Images.xcassets */,
 				7092967E1A11650700C92E9C /* stackOverflowClient.xcdatamodeld */,
 				709296771A11650700C92E9C /* Supporting Files */,
@@ -297,6 +302,7 @@
 				70B3F8071A117A8000A4FCDC /* QuestionViewController.m in Sources */,
 				70F32F271A12BECD006CDA34 /* PofileViewController.m in Sources */,
 				70F32F231A1280BD006CDA34 /* QuestionCell.m in Sources */,
+				70090BD31A13E1F5008B2E86 /* Constants.m in Sources */,
 				70F32F2E1A12C1CC006CDA34 /* WebViewController.m in Sources */,
 				7092967A1A11650700C92E9C /* main.m in Sources */,
 				70B3F80A1A117B7900A4FCDC /* Question.m in Sources */,

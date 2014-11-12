@@ -153,27 +153,6 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="c3e-xs-3nj">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c3e-xs-3nj" id="drP-SC-8TB">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Profile" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMK-Me-vbc">
-                                                    <rect key="frame" x="16" y="11.5" width="76.5" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="centerY" secondItem="hMK-Me-vbc" secondAttribute="centerY" id="Fj1-2v-q4g"/>
-                                                <constraint firstItem="hMK-Me-vbc" firstAttribute="leading" secondItem="drP-SC-8TB" secondAttribute="leadingMargin" constant="8" id="pgx-aD-nWq"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="d7F-7O-CZr" kind="showDetail" id="lYg-y1-1en"/>
-                                        </connections>
-                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -248,88 +227,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HfG-Jm-1Ht" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1175" y="240"/>
-        </scene>
-        <!--Pofile View Controller-->
-        <scene sceneID="l3g-f0-iIa">
-            <objects>
-                <viewController storyboardIdentifier="profileVC" id="d7F-7O-CZr" customClass="PofileViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="HfG-Jf-637"/>
-                        <viewControllerLayoutGuide type="bottom" id="QMM-3X-9wI"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="E1x-He-Qrd">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3zV-8v-UMI">
-                                <rect key="frame" x="275" y="285" width="51" height="30"/>
-                                <state key="normal" title="LOG IN">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="ZQT-F5-Dgt" kind="presentation" id="tcI-Zb-XfZ"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerY" secondItem="3zV-8v-UMI" secondAttribute="centerY" id="6di-SG-HuJ"/>
-                            <constraint firstAttribute="centerX" secondItem="3zV-8v-UMI" secondAttribute="centerX" id="d54-fE-Xjq"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BNi-xJ-Voj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="444" y="612"/>
-        </scene>
-        <!--Web View Controller-->
-        <scene sceneID="wfi-Ms-AqO">
-            <objects>
-                <viewController id="ZQT-F5-Dgt" customClass="WebViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="M5D-eW-SAI"/>
-                        <viewControllerLayoutGuide type="bottom" id="gaa-M1-Afy"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="vpe-eW-qfq">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5mg-6B-e9U">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </webView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zFj-GU-qQO">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="QqM-pE-1ob"/>
-                                </constraints>
-                                <items>
-                                    <barButtonItem title="Cancel" id="8vJ-ea-aZ9">
-                                        <connections>
-                                            <action selector="cancelButton:" destination="ZQT-F5-Dgt" id="iWB-Rh-zV7"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="5mg-6B-e9U" secondAttribute="trailing" constant="-16" id="4V8-Tc-cLw"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="zFj-GU-qQO" secondAttribute="trailing" constant="-16" id="8W2-ZD-IfX"/>
-                            <constraint firstItem="gaa-M1-Afy" firstAttribute="top" secondItem="5mg-6B-e9U" secondAttribute="bottom" id="VkD-ke-tNy"/>
-                            <constraint firstItem="5mg-6B-e9U" firstAttribute="top" secondItem="vpe-eW-qfq" secondAttribute="topMargin" id="YjG-WA-HIK"/>
-                            <constraint firstItem="zFj-GU-qQO" firstAttribute="leading" secondItem="vpe-eW-qfq" secondAttribute="leadingMargin" constant="-16" id="bhl-MU-lch"/>
-                            <constraint firstItem="zFj-GU-qQO" firstAttribute="top" secondItem="vpe-eW-qfq" secondAttribute="topMargin" id="d2i-TX-4cN"/>
-                            <constraint firstItem="5mg-6B-e9U" firstAttribute="leading" secondItem="vpe-eW-qfq" secondAttribute="leadingMargin" constant="-16" id="hud-E7-ZHV"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="webView" destination="5mg-6B-e9U" id="l4h-xc-6pm"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WEE-cr-ufP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1102" y="612"/>
         </scene>
     </scenes>
 </document>

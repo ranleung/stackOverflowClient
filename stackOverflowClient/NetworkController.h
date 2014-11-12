@@ -7,15 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Question.h"
+
 
 @interface NetworkController : NSObject
 
 @property (nonatomic, strong) NSOperationQueue *operationQueue;
+@property (nonatomic, strong) NSURLSession *urlSession;
 @property (nonatomic, retain) NSString *network;
-@property (nonatomic, strong) NSString *token;
+
 
 - (void)fetchQuestionsWithSearchTerm:(NSString*)key completionHandler:(void(^)(NSError *error, NSMutableArray *repsonse)) completionHandler;
+
++ (void)setToken:(NSString *)token;
 
 + (id)sharedManager;
 

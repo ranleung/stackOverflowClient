@@ -7,14 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NetworkController.h"
+#import <WebKit/WebKit.h>
 
-@interface WebViewController : UIViewController <UITableViewDelegate, UIWebViewDelegate>
+@interface WebViewController : UIViewController <WKNavigationDelegate>
 
-@property (strong, nonatomic) IBOutlet UIWebView *webView;
-@property (strong, nonatomic) NetworkController *sharedManager;
 
-- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType;
+
+
+//- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType;
 
 
 @end
