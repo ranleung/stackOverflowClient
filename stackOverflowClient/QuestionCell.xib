@@ -14,12 +14,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iCK-td-f3Y">
-                        <rect key="frame" x="16" y="36" width="69" height="20.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbQ-zi-7cB">
                         <rect key="frame" x="16" y="16" width="61.5" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -27,8 +21,14 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tags" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxX-kS-ZcW">
-                        <rect key="frame" x="16" y="60" width="26" height="14.5"/>
+                        <rect key="frame" x="16" y="158" width="26" height="14.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Question" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iCK-td-f3Y">
+                        <rect key="frame" x="16" y="36" width="495" height="118"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -38,7 +38,9 @@
                     <constraint firstItem="xxX-kS-ZcW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="76r-Pt-zV2"/>
                     <constraint firstItem="xxX-kS-ZcW" firstAttribute="top" secondItem="iCK-td-f3Y" secondAttribute="bottom" constant="4" id="CkX-I2-PHl"/>
                     <constraint firstItem="iCK-td-f3Y" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="Gne-Ay-GAP"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="iCK-td-f3Y" secondAttribute="trailing" constant="8" id="OPt-pg-lCL"/>
                     <constraint firstItem="iCK-td-f3Y" firstAttribute="top" secondItem="nbQ-zi-7cB" secondAttribute="bottom" constant="4" id="RGa-gO-scP"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="xxX-kS-ZcW" secondAttribute="bottom" constant="8" id="ZaD-g9-21Z"/>
                     <constraint firstItem="nbQ-zi-7cB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="n0o-Vn-gl1"/>
                 </constraints>
             </tableViewCellContentView>

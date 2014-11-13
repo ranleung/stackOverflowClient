@@ -18,6 +18,8 @@
     
     self.title = NSLocalizedString(@"Questions", @"Questions");
     
+    [[self view] setBackgroundColor:[UIColor whiteColor]];
+    
     //Register Nib
     [[self tableView] registerNib:[UINib nibWithNibName:@"QuestionCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"QUESTION_CELL"];
     

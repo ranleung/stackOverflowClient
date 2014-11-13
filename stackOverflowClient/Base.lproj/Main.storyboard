@@ -26,20 +26,20 @@
         <!--Question View Controller-->
         <scene sceneID="aOW-Rv-HYl">
             <objects>
-                <viewController id="fPA-gO-dtu" customClass="QuestionViewController" sceneMemberID="viewController">
+                <viewController extendedLayoutIncludesOpaqueBars="YES" id="fPA-gO-dtu" customClass="QuestionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Evh-kq-C6I"/>
                         <viewControllerLayoutGuide type="bottom" id="vX8-jc-wZ2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gFB-lD-yC6">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="44" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="53" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="SFh-vo-glY">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <searchBar key="tableHeaderView" contentMode="redraw" id="75w-Mv-i4q">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <rect key="frame" x="0.0" y="278" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <textInputTraits key="textInputTraits" returnKeyType="search"/>
                                     <scopeButtonTitles>
@@ -60,40 +60,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="SFh-vo-glY" firstAttribute="top" secondItem="Evh-kq-C6I" secondAttribute="bottom" id="58C-qp-iHC"/>
-                            <constraint firstItem="SFh-vo-glY" firstAttribute="top" secondItem="Evh-kq-C6I" secondAttribute="bottom" id="9dX-iV-37u"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="SFh-vo-glY" secondAttribute="trailing" constant="-16" id="HZX-mN-T5Y"/>
-                            <constraint firstItem="SFh-vo-glY" firstAttribute="leading" secondItem="gFB-lD-yC6" secondAttribute="leadingMargin" constant="-16" id="NhG-v3-gPD"/>
-                            <constraint firstItem="SFh-vo-glY" firstAttribute="leading" secondItem="gFB-lD-yC6" secondAttribute="leadingMargin" constant="-16" id="OM3-VW-2r1"/>
-                            <constraint firstItem="SFh-vo-glY" firstAttribute="top" secondItem="Evh-kq-C6I" secondAttribute="bottom" id="TNO-1c-dbj"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="SFh-vo-glY" secondAttribute="trailing" constant="-16" id="XCu-rC-Hqb"/>
-                            <constraint firstItem="vX8-jc-wZ2" firstAttribute="top" secondItem="SFh-vo-glY" secondAttribute="bottom" id="Zr0-7b-a4j"/>
-                            <constraint firstItem="SFh-vo-glY" firstAttribute="leading" secondItem="gFB-lD-yC6" secondAttribute="leadingMargin" constant="-16" id="cVA-TD-oVM"/>
-                            <constraint firstItem="SFh-vo-glY" firstAttribute="leading" secondItem="gFB-lD-yC6" secondAttribute="leadingMargin" constant="-16" id="dCb-Hh-8uV"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="SFh-vo-glY" secondAttribute="trailing" constant="-16" id="p7W-WY-mBQ"/>
-                            <constraint firstItem="vX8-jc-wZ2" firstAttribute="top" secondItem="SFh-vo-glY" secondAttribute="bottom" id="qsB-xo-A0B"/>
-                            <constraint firstItem="vX8-jc-wZ2" firstAttribute="top" secondItem="SFh-vo-glY" secondAttribute="bottom" id="sxM-wv-MDV"/>
-                            <constraint firstItem="SFh-vo-glY" firstAttribute="top" secondItem="Evh-kq-C6I" secondAttribute="bottom" id="t7V-FD-5bw"/>
-                            <constraint firstItem="vX8-jc-wZ2" firstAttribute="top" secondItem="SFh-vo-glY" secondAttribute="bottom" id="tde-Ab-Zc1"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="SFh-vo-glY" secondAttribute="trailing" constant="-16" id="zDG-xQ-Fjl"/>
+                            <constraint firstItem="SFh-vo-glY" firstAttribute="top" secondItem="Evh-kq-C6I" secondAttribute="bottom" id="Dak-O8-0gm"/>
+                            <constraint firstAttribute="trailing" secondItem="SFh-vo-glY" secondAttribute="trailing" id="KaQ-nB-k5i"/>
+                            <constraint firstItem="SFh-vo-glY" firstAttribute="leading" secondItem="gFB-lD-yC6" secondAttribute="leading" id="Yh0-S7-glG"/>
+                            <constraint firstItem="vX8-jc-wZ2" firstAttribute="top" secondItem="SFh-vo-glY" secondAttribute="bottom" id="ea5-4A-UmT"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="58C-qp-iHC"/>
-                                <exclude reference="HZX-mN-T5Y"/>
-                                <exclude reference="NhG-v3-gPD"/>
-                                <exclude reference="TNO-1c-dbj"/>
-                                <exclude reference="XCu-rC-Hqb"/>
-                                <exclude reference="cVA-TD-oVM"/>
-                                <exclude reference="dCb-Hh-8uV"/>
-                                <exclude reference="t7V-FD-5bw"/>
-                                <exclude reference="zDG-xQ-Fjl"/>
-                                <exclude reference="qsB-xo-A0B"/>
-                                <exclude reference="sxM-wv-MDV"/>
-                                <exclude reference="tde-Ab-Zc1"/>
-                            </mask>
-                        </variation>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
                         <outlet property="searchBar" destination="75w-Mv-i4q" id="Xw3-dS-0hy"/>
                         <outlet property="tableView" destination="SFh-vo-glY" id="lGR-gu-fto"/>
