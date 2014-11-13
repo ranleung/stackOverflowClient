@@ -10,11 +10,9 @@
 #import "Constants.h"
 #import "NetworkController.h"
 
-@interface WebViewController () <WKNavigationDelegate> {
-    WKWebView *webView;
-    
-}
+@interface WebViewController()
 
+@property (strong, nonatomic) WKWebView *webView;
 @end
 
 @implementation WebViewController
@@ -23,17 +21,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    webView.navigationDelegate = self;
+    self.webView.navigationDelegate = self;
     
     NSString *urlString = [NSString stringWithFormat:@"%@?client_id=%@&redirect_uri=%@&scope=read_inbox", kOAuthURL, kClientID, kOAuthDomain];
     NSURL *url = [[NSURL alloc] initWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    [webView loadRequest:request];
+    [self.webView loadRequest:request];
 }
 
 - (void)loadView {
-    webView = [[WKWebView alloc] init];
-    self.view = webView;
+    self.webView = [[WKWebView alloc] init];
+    self.view = self.webView;
 }
 
 -(void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
@@ -54,6 +52,7 @@
         [self dismissViewControllerAnimated:YES completion:nil];
     }
 }
+
 
 //-(void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
 //    NSLog(@"%@", webView.);
