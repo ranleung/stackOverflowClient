@@ -7,8 +7,10 @@
 //
 
 #import "QuestionViewController.h"
+#import "NSString+HTML.h"
 
 @interface QuestionViewController ()
+
 @end
 
 @implementation QuestionViewController
@@ -51,7 +53,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     QuestionCell *cell = [tableView dequeueReusableCellWithIdentifier:@"QUESTION_CELL"];
     Question *question = self.questions[indexPath.row];
-    cell.questionLabel.text = question.title;
+    cell.questionLabel.text = [question.title kv_decodeHTMLCharacterEntities];
     cell.userName.text = question.userName;
     return cell;
 }
@@ -59,5 +61,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
 }
+
 
 @end

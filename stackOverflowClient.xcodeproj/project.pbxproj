@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		70090BD31A13E1F5008B2E86 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 70090BD21A13E1F5008B2E86 /* Constants.m */; };
 		703AE6751A146B170030BE81 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 703AE6771A146B170030BE81 /* Localizable.strings */; };
+		7088850F1A156F92002DEE12 /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 7088850E1A156F92002DEE12 /* NSString+HTML.m */; };
 		7092967A1A11650700C92E9C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 709296791A11650700C92E9C /* main.m */; };
 		7092967D1A11650700C92E9C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7092967C1A11650700C92E9C /* AppDelegate.m */; };
 		709296801A11650700C92E9C /* stackOverflowClient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7092967E1A11650700C92E9C /* stackOverflowClient.xcdatamodeld */; };
@@ -48,6 +49,8 @@
 		703AE6761A146B170030BE81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		703AE6781A146B190030BE81 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		703AE6791A146B1B0030BE81 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7088850D1A156F92002DEE12 /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
+		7088850E1A156F92002DEE12 /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
 		709296741A11650700C92E9C /* stackOverflowClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stackOverflowClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		709296781A11650700C92E9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		709296791A11650700C92E9C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -191,6 +194,8 @@
 				70B3F8091A117B7900A4FCDC /* Question.m */,
 				70B3F80B1A117B8200A4FCDC /* User.h */,
 				70B3F80C1A117B8200A4FCDC /* User.m */,
+				7088850D1A156F92002DEE12 /* NSString+HTML.h */,
+				7088850E1A156F92002DEE12 /* NSString+HTML.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -321,6 +326,7 @@
 				70090BD31A13E1F5008B2E86 /* Constants.m in Sources */,
 				70F32F2E1A12C1CC006CDA34 /* WebViewController.m in Sources */,
 				7092967A1A11650700C92E9C /* main.m in Sources */,
+				7088850F1A156F92002DEE12 /* NSString+HTML.m in Sources */,
 				70B3F80A1A117B7900A4FCDC /* Question.m in Sources */,
 				709296831A11650700C92E9C /* ViewController.m in Sources */,
 				709296801A11650700C92E9C /* stackOverflowClient.xcdatamodeld in Sources */,
