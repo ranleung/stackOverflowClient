@@ -12,7 +12,9 @@
 
 @interface WebViewController () <WKNavigationDelegate> {
     WKWebView *webView;
+    
 }
+
 @end
 
 @implementation WebViewController
@@ -39,7 +41,6 @@
     NSLog(@"%@",navigationAction.request.URL);
     decisionHandler(WKNavigationActionPolicyAllow);
     
-    //NSString *requestString = [[[navigationAction request] URL] description];
     NSString *requestString = [[[navigationAction request] URL] absoluteString];
     if ([requestString containsString:@"access_token"]) {
         NSArray *components = [requestString componentsSeparatedByString:@"="];

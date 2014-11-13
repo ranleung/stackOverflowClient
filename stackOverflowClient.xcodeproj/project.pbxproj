@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		70090BD31A13E1F5008B2E86 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 70090BD21A13E1F5008B2E86 /* Constants.m */; };
+		703AE6751A146B170030BE81 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 703AE6771A146B170030BE81 /* Localizable.strings */; };
 		7092967A1A11650700C92E9C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 709296791A11650700C92E9C /* main.m */; };
 		7092967D1A11650700C92E9C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7092967C1A11650700C92E9C /* AppDelegate.m */; };
 		709296801A11650700C92E9C /* stackOverflowClient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7092967E1A11650700C92E9C /* stackOverflowClient.xcdatamodeld */; };
@@ -42,6 +43,11 @@
 /* Begin PBXFileReference section */
 		70090BD11A13E1F5008B2E86 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		70090BD21A13E1F5008B2E86 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		703AE6731A146AE20030BE81 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		703AE6741A146AE20030BE81 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		703AE6761A146B170030BE81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		703AE6781A146B190030BE81 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		703AE6791A146B1B0030BE81 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		709296741A11650700C92E9C /* stackOverflowClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stackOverflowClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		709296781A11650700C92E9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		709296791A11650700C92E9C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -120,6 +126,7 @@
 				7092967C1A11650700C92E9C /* AppDelegate.m */,
 				70090BD11A13E1F5008B2E86 /* Constants.h */,
 				70090BD21A13E1F5008B2E86 /* Constants.m */,
+				703AE6771A146B170030BE81 /* Localizable.strings */,
 				70CF53491A14389E0023B8A8 /* sample.json */,
 				70B3F7FA1A1178F100A4FCDC /* Controller */,
 				70B3F7FB1A1178FE00A4FCDC /* Model */,
@@ -263,6 +270,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 7092966B1A11650700C92E9C;
 			productRefGroup = 709296751A11650700C92E9C /* Products */;
@@ -281,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70CF534A1A14389E0023B8A8 /* sample.json in Resources */,
+				703AE6751A146B170030BE81 /* Localizable.strings in Resources */,
 				709296861A11650700C92E9C /* Main.storyboard in Resources */,
 				70F32F241A1280BD006CDA34 /* QuestionCell.xib in Resources */,
 				7092968B1A11650700C92E9C /* LaunchScreen.xib in Resources */,
@@ -338,10 +347,21 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		703AE6771A146B170030BE81 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				703AE6761A146B170030BE81 /* Base */,
+				703AE6781A146B190030BE81 /* en */,
+				703AE6791A146B1B0030BE81 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		709296841A11650700C92E9C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				709296851A11650700C92E9C /* Base */,
+				703AE6731A146AE20030BE81 /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -350,6 +370,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				7092968A1A11650700C92E9C /* Base */,
+				703AE6741A146AE20030BE81 /* es */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";

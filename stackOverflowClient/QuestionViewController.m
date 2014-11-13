@@ -16,7 +16,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"Questions";
+    self.title = NSLocalizedString(@"Questions", @"Questions");
     
     //Register Nib
     [[self tableView] registerNib:[UINib nibWithNibName:@"QuestionCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"QUESTION_CELL"];
