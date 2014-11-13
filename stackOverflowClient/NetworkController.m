@@ -50,7 +50,6 @@
 
 - (void)fetchQuestionsWithSearchTerm:(NSString *)key completionHandler: (void(^)(NSError *error, NSMutableArray *response))completionHandler {
     
-    //https://api.stackexchange.com/2.2/search/advanced?order=desc&sort=activity&site=stackoverflow&q=objective-c&access_token=c6YOPm8JW7JsfbLrwNzzWw))&key=foou1)sdBxY)4C9g5GCNrw((
     
 //    NSString *urlWithKey = [NSString stringWithFormat:@"https://api.stackexchange.com/2.2/search?order=desc&sort=activity&tagged=%@&site=stackoverflow", key];
     

@@ -20,16 +20,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame))];
-    webView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+
     webView.navigationDelegate = self;
-    [self.view addSubview:webView];
     
     NSString *urlString = [NSString stringWithFormat:@"%@?client_id=%@&redirect_uri=%@&scope=read_inbox", kOAuthURL, kClientID, kOAuthDomain];
     NSURL *url = [[NSURL alloc] initWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [webView loadRequest:request];
+}
+
+- (void)loadView {
+    webView = [[WKWebView alloc] init];
+    self.view = webView;
 }
 
 -(void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
@@ -47,7 +49,7 @@
         [[NSUserDefaults standardUserDefaults] setObject:token forKey:@"oauth_token"];
         [NetworkController setToken:token];
         
-        //[self dismissViewControllerAnimated:YES completion:nil];
+        [self dismissViewControllerAnimated:YES completion:nil];
     }
 }
 
