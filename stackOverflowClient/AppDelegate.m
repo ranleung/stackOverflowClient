@@ -19,7 +19,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    NSString *token = [[NSUserDefaults standardUserDefaults] objectForKey:@"oauth_token"];
+    NSString *token = [[NSUserDefaults standardUserDefaults] objectForKey:@"authToken"];
     if (!token) {
         dispatch_after(1, dispatch_get_main_queue(), ^{
             [((UIWindow *)[[UIApplication sharedApplication].windows firstObject]).rootViewController presentViewController:[WebViewController new] animated:YES completion:nil];

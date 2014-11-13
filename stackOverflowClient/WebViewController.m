@@ -45,7 +45,7 @@
         NSArray *tokenComponents = [components[1] componentsSeparatedByString:@"&"];
         NSLog(@"%@", tokenComponents[0]);
         NSString *token = tokenComponents[0];
-        [[NSUserDefaults standardUserDefaults] setObject:token forKey:@"oauth_token"];
+        [[NSUserDefaults standardUserDefaults] setObject:token forKey:@"authToken"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         [NetworkController setToken:token];
         
