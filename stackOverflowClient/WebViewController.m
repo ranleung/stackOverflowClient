@@ -47,6 +47,7 @@
         NSLog(@"%@", tokenComponents[0]);
         NSString *token = tokenComponents[0];
         [[NSUserDefaults standardUserDefaults] setObject:token forKey:@"oauth_token"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
         [NetworkController setToken:token];
         
         [self dismissViewControllerAnimated:YES completion:nil];
