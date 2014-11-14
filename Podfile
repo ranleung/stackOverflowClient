@@ -4,7 +4,7 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
 target 'stackOverflowClient' do
-
+	pod 'SVProgressHUD', :head
 end
 
 target 'stackOverflowClientTests' do

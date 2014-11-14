@@ -8,8 +8,11 @@
 
 #import "QuestionViewController.h"
 #import "NSString+HTML.h"
+#import <SVProgressHUD/SVProgressHUD.h>
 
 @interface QuestionViewController ()
+
+//@property (nonatomic, strong) SVProgressHUD *progressHUD;
 
 @end
 
@@ -35,6 +38,7 @@
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     NSLog(@"%@",searchBar);
+    [SVProgressHUD show];
     [self.sharedManager fetchQuestionsWithSearchTerm:self.searchBar.text completionHandler:^(NSError *error, NSMutableArray *response) {
         if (error != nil) {
             NSLog(@"%@", error.localizedDescription);
@@ -43,6 +47,7 @@
             [self.tableView reloadData];
         }
     }];
+    [SVProgressHUD dismiss];
     [self.searchBar resignFirstResponder];
 }
 

@@ -2,4 +2,12 @@
 
 An iOS app written in Objective-C
 
-Built using Xcode 6.1
+
+## Dependencies
+SVProgressHUD
+
+`pod install`
+
+### Built using Xcode 6.1
+
+
