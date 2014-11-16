@@ -1,6 +1,8 @@
 # Stack Overflow Client
 
-An iOS app written in Objective-C
+An iOS Stack Overflow app written in Objective-C.  Authenticates user with stackover flow account.  Lets user search questions throught he StackOverflow API.
+
+This demo app was create to test using WebKit API and CocoaPods.
 
 
 ## Dependencies
