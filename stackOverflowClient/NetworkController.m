@@ -66,7 +66,7 @@
                 NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
                 NSInteger statusCode = [httpResponse statusCode];
                 if (statusCode >= 200 && statusCode <= 299) {
-                    NSMutableArray *questions = [Question parseJSONDataIntoQuestions:data];
+                    NSMutableArray *questions = [[Question alloc] parseJSONDataIntoQuestions:data];
                     NSLog(@"Number of questions found: %lu", (unsigned long)questions.count);
                     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                         completionHandler(nil, questions);

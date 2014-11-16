@@ -8,30 +8,38 @@
 
 #import "Question.h"
 
+@interface Question()
+
+@end
+
 @implementation Question
 
-- (instancetype)init: (NSDictionary *)questionDic {
+- (id)init {
+    self = [super init];
+    return self;
+}
+
+- (instancetype)initWithDictionary: (NSDictionary *)questionDic {
     if (self = [super init]) {
-        self.title = questionDic[@"title"];
+        self.title = [questionDic valueForKey:@"title"];
         self.tags = questionDic[@"tags"];
-        NSDictionary *owner = questionDic[@"owner"];
-        self.ownerID = owner[@"user_id"];
-        self.userName = owner[@"display_name"];
+        self.ownerID = [questionDic valueForKeyPath:@"owner.user_id"];
+        self.userName = [questionDic valueForKeyPath:@"owner.display_name"];
     }
     return self;
 }
 
-+ (NSMutableArray *)parseJSONDataIntoQuestions: (NSData *)rawJSONData {
+- (NSMutableArray *)parseJSONDataIntoQuestions: (NSData *)rawJSONData {
     NSError *error = nil;
     NSMutableArray *questions = [[NSMutableArray alloc] init];
     NSDictionary *searchJSONDictionary = [NSJSONSerialization JSONObjectWithData:rawJSONData options:0 error: &error];
     for(NSDictionary *questionDictionary in searchJSONDictionary[@"items"]) {
-        Question *questionObject = [[Question alloc] init: questionDictionary];
+        Question *questionObject = [[Question alloc] initWithDictionary:questionDictionary];
         [questions addObject:questionObject];
     }
     return questions;
     
-};
+}
 
 @end
 

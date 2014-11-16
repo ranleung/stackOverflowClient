@@ -37,7 +37,7 @@
     
     NSString *path = [[NSBundle mainBundle] pathForResource:@"sample" ofType:@"json"];
     NSData *data = [NSData dataWithContentsOfFile:path];
-    NSMutableArray *array = [Question parseJSONDataIntoQuestions:data];
+    NSMutableArray *array = [[Question init] parseJSONDataIntoQuestions:data];
     
     Question *question = array[0];
     XCTAssertTrue(question);

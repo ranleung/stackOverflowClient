@@ -15,7 +15,7 @@
 @property (nonatomic, strong) NSString *ownerID;
 @property (nonatomic, strong) NSString *userName;
 
-- (instancetype)init: (NSDictionary *)questionDic;
-+ (NSMutableArray *)parseJSONDataIntoQuestions: (NSData *)rawJSONData;
+- (instancetype)initWithDictionary: (NSDictionary *)questionDic;
+- (NSMutableArray *)parseJSONDataIntoQuestions: (NSData *)rawJSONData;
 
 @end
